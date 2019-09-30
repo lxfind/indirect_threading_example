@@ -87,6 +87,7 @@ int indirect_threading_loop(int bytecode[]) {
   pc++;           \
   goto *opcodeDispatch[bytecode[pc]];
 
+goto *opcodeDispatch[bytecode[0]];
 case_OP0:
   x = 1000000000;
   DISPATCH
