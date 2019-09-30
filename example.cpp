@@ -76,7 +76,7 @@ int switch_loop(int bytecode[]) {
   }
 }
 
-int indirect_threading_loop(int bytecode[10000]) {
+int indirect_threading_loop(int bytecode[]) {
   int pc = 0;
   int x = 0;
   static void *opcodeDispatch[] = {
@@ -125,6 +125,6 @@ case_OP10:
 
 int main() {
   int bytecode[] = {OP0, OP1, OP2, OP3, OP4, OP5, OP6, OP7, OP8, OP9, 1, OP10};
-  //printf("%d\n", switch_loop(bytecode));
-  printf("%d\n", indirect_threading_loop(bytecode));
+  printf("%d\n", switch_loop(bytecode));
+  //printf("%d\n", indirect_threading_loop(bytecode));
 }
